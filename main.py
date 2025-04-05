@@ -1,4 +1,4 @@
-from stats import wordCount
+from stats import *
 
 def getText(path):
     with open(path) as f:
@@ -9,9 +9,10 @@ def getText(path):
 def main():
     path = "books/frankenstein.txt"
     text = getText(path)
-    count = wordCount(text)
-    print(f"{count} words found in the document")
-
+    words = wordCount(text)
+    chars = charCount(text)
+    print(f"{words} words found in the document")
+    print(chars)
 main()
     
 
