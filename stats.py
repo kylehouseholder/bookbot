@@ -27,13 +27,3 @@ def dList(input):
     out.sort(key=whichval, reverse=True)
     return out
 
-def display(bookPath, iwords, charList):
-    print(f"============ BOOKBOT ============")
-    print(f"Analyzing book found at {bookPath}...")
-    print(f"----------- Word Count ----------")
-    print(f"Found {iwords} total words")
-    print(f"--------- Character Count -------")
-    for item in charList:
-        print(f"{item['char']}: {item['count']}")
-    print(f"============= END ===============")
-
