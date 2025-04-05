@@ -11,3 +11,29 @@ def charCount(text):
         else:
             counts[char] = 1
     return counts
+
+def whichval(input):
+    return input["count"]
+    
+def dList(input):
+    out = []    # list'o'dicts
+    for char, count in input.items():
+        if char.isalpha():
+            entry = {
+                "char": char,
+                "count": count
+            }
+            out.append(entry)
+    out.sort(key=whichval, reverse=True)
+    return out
+
+def display(bookPath, iwords, charList):
+    print(f"============ BOOKBOT ============")
+    print(f"Analyzing book found at {bookPath}...")
+    print(f"----------- Word Count ----------")
+    print(f"Found {iwords} total words")
+    print(f"--------- Character Count -------")
+    for item in charList:
+        print(f"{item['char']}: {item['count']}")
+    print(f"============= END ===============")
+
